@@ -75,7 +75,7 @@ names(subsetted_data)<-gsub("BodyBody", "Body", names(subsetted_data))
 
 
 ## Task 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-tidy_data <- aggregate(raw_data[, -(1:2)], by = list(subject = raw_data$subject, activity = raw_data$activity), FUN = mean)
+tidy_data <- aggregate(subsetted_data[, -(1:2)], by = list(subject = subsetted_data$subject, activity = subsetted_data$activity), FUN = mean)
 # Order the resultant dataset
 tidy_data <- tidy_data[order(tidy_data$subject, tidy_data$activity),]
 # Write the tidy dataset into a text file

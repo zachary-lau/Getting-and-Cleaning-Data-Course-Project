@@ -12,7 +12,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
-# Variable
+# Identififiers
 * subject - ID of the 30 volunteers who performed the activity. Its range is from 1 to 30.
 * activity - Activity type that the 30 volunteers who performed the activity.
 It has 6 levels:
@@ -23,37 +23,73 @@ It has 6 levels:
 5. STANDING
 6. LAYING
 
-# Data Manipulation
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals timeAccelerometer a-XYZ and timeGyroscope-XYZ. These time domain signals were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (timeBodyacceleration-XYZ and timeGravityAcceleration-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
-
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (timeBodyAccelerationJerk-XYZ and timeBodyGyroscopeJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (timeBodyAccelerationMagnitude, timeGravityAccelerationMagnitude, timeBodyAccelerationJerkMagnitude, timeBodyGyroscopeMagnitude, timeBodyGyroscopeJerkMagnitude).
-
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcceleration-XYZ, frequencyBodyAccelerationJerk-XYZ, frequencyBodyGyro-XYZ, frequencyBodyAccelerationJerkMagnitude, frequencyBodyGyroMagnitude, frequencyBodyGyroJerkMagnitude.
-
-These signals were used to estimate variables of the feature vector for each pattern:
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-timeBodyAccelerometer-XYZ
-timeGravityAccelerometer-XYZ
-timeBodyAccelerometerJerk-XYZ
-timeBodyGyroscope-XYZ
-timeBodyGyroscopeJerk-XYZ
-timeBodyAccelerometerMagnitude
-timeGravityAccelerometerMagnitude
-timeBodyAccelerometerJerkMagnitude
-timeBodyGyroscopeMagnitude
-timeBodyGyroscopeJerkMagnitude
-frequencyBodyAccelerometer-XYZ
-frequencyBodyAccelerometerJerk-XYZ
-frequencyBodyGyroscope-XYZ
-frequencyBodyAccelerometerMagnitude
-frequencyBodyAccelerometerJerkMagnitude
-frequencyBodyGyroscopeMagnitude
-frequencyBodyGyroscopeJerkMagnitude
-The set of variables that were estimated from these signals are:
-
-mean(): Mean value
-std(): Standard deviation
+# Measurements
+* Time-BodyAccelerometer-Mean-X
+* Time-BodyAccelerometer-Mean-Y
+* Time-BodyAccelerometer-Mean-Z
+* Time-BodyAccelerometer-Std-X
+* Time-BodyAccelerometer-Std-Y
+* Time-BodyAccelerometer-Std-Z
+* Time-GravityAccelerometer-Mean-X
+* Time-GravityAccelerometer-Mean-Y
+* Time-GravityAccelerometer-Mean-Z
+* Time-GravityAccelerometer-Std-X
+* Time-GravityAccelerometer-Std-Y
+* Time-GravityAccelerometer-Std-Z
+* Time-BodyAccelerometerJerk-Mean-X
+* Time-BodyAccelerometerJerk-Mean-Y
+* Time-BodyAccelerometerJerk-Mean-Z
+* Time-BodyAccelerometerJerk-Std-X
+* Time-BodyAccelerometerJerk-Std-Y
+* Time-BodyAccelerometerJerk-Std-Z
+* Time-BodyGyroscope-Mean-X
+* Time-BodyGyroscope-Mean-Y
+* Time-BodyGyroscope-Mean-Z
+* Time-BodyGyroscope-Std-X
+* Time-BodyGyroscope-Std-Y
+* Time-BodyGyroscope-Std-Z
+* Time-BodyGyroscopeJerk-Mean-X
+* Time-BodyGyroscopeJerk-Mean-Y
+* Time-BodyGyroscopeJerk-Mean-Z
+* Time-BodyGyroscopeJerk-Std-X
+* Time-BodyGyroscopeJerk-Std-Y
+* Time-BodyGyroscopeJerk-Std-Z
+* Time-BodyAccelerometerMagnitude-Mean
+* Time-BodyAccelerometerMagnitude-Std
+* Time-GravityAccelerometerMagnitude-Mean
+* Time-GravityAccelerometerMagnitude-Std
+* Time-BodyAccelerometerJerkMagnitude-Mean
+* Time-BodyAccelerometerJerkMagnitude-Std
+* Time-BodyGyroscopeMagnitude-Mean
+* Time-BodyGyroscopeMagnitude-Std
+* Time-BodyGyroscopeJerkMagnitude-Mean
+* Time-BodyGyroscopeJerkMagnitude-Std
+* Frequency-BodyAccelerometer-Mean-X
+* Frequency-BodyAccelerometer-Mean-Y
+* Frequency-BodyAccelerometer-Mean-Z
+* Frequency-BodyAccelerometer-Std-X
+* Frequency-BodyAccelerometer-Std-Y
+* Frequency-BodyAccelerometer-Std-Z
+* Frequency-BodyAccelerometerJerk-Mean-X
+* Frequency-BodyAccelerometerJerk-Mean-Y
+* Frequency-BodyAccelerometerJerk-Mean-Z
+* Frequency-BodyAccelerometerJerk-Std-X
+* Frequency-BodyAccelerometerJerk-Std-Y
+* Frequency-BodyAccelerometerJerk-Std-Z
+* Frequency-BodyGyroscope-Mean-X
+* Frequency-BodyGyroscope-Mean-Y
+* Frequency-BodyGyroscope-Mean-Z
+* Frequency-BodyGyroscope-Std-X
+* Frequency-BodyGyroscope-Std-Y
+* Frequency-BodyGyroscope-Std-Z
+* Frequency-BodyAccelerometerMagnitude-Mean
+* Frequency-BodyAccelerometerMagnitude-Std
+* Frequency-BodyAccelerometerJerkMagnitude-Mean
+* Frequency-BodyAccelerometerJerkMagnitude-Std
+* Frequency-BodyGyroscopeMagnitude-Mean
+* Frequency-BodyGyroscopeMagnitude-Std
+* Frequency-BodyGyroscopeJerkMagnitude-Mean
+* Frequency-BodyGyroscopeJerkMagnitude-Std
 
 # Dataset summary
 ```

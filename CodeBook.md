@@ -91,6 +91,15 @@ It has 6 levels:
 * Frequency-BodyGyroscopeJerkMagnitude-Mean
 * Frequency-BodyGyroscopeJerkMagnitude-Std
 
+# Data Manipulation
+1. Combine the train and test datasets of the subject, activity, and the feature dataset resp. The outcome datasets are `s_data`, `y_data`, and `x_data`
+2. Name each of the columns of the datasets above. The column names for featrues dataset are retrieved from the text file `features.txt`
+3. Merge the datasets above into one dataset `raw_data`
+4. Filter to retain only the subject and activity data and data corresponding to the mean and standard deviation for measurements
+5. Factorize the column activity with descriptive activity names and the column subject
+6. Search and replace strings in column names to make them more readable
+7. Aggregate the dataset by subject and activity and calculate the mean for each measurement column in the aggregate dataset
+
 # Dataset summary
 ```
     subject                   activity  Time-BodyAccelerometer-Mean-X Time-BodyAccelerometer-Mean-Y Time-BodyAccelerometer-Mean-Z

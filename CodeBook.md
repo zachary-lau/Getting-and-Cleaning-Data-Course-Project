@@ -56,7 +56,7 @@ mean(): Mean value
 std(): Standard deviation
 
 # Dataset summary
-
+`
 ##     subject                   activity  timeBodyAccelerometer-mean()-X
 ##  Min.   : 1.0   WALKING           :30   Min.   :0.2216                
 ##  1st Qu.: 8.0   WALKING_UPSTAIRS  :30   1st Qu.:0.2712                
@@ -357,4 +357,4 @@ std(): Standard deviation
 ##  Median :-0.8941                          
 ##  Mean   :-0.7715                          
 ##  3rd Qu.:-0.6081                          
-##  Max.   : 0.2878
+##  Max.   : 0.2878`
